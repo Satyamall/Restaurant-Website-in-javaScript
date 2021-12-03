@@ -1,0 +1,499 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    transition: margin-left .5s;
+    padding: 16px;
+    padding-left: 5%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#icon-box {
+    margin-left: 2%;
+    top: 10px;
+}
+
+.nav-icon{
+    text-decoration: none;
+    color: red;
+}
+#search-box {
+    margin-left: 10px;
+    width: 40%;
+    display: flex;
+    position: relative;
+}
+
+.search-icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: white;
+}
+
+#search-box>input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding-left: 30px;
+}
+
+#toggle {
+    margin-left: 2%;
+}
+
+#toggle img {
+    width: 20px;
+    color: rgb(245, 245, 245);
+}
+
+#toggle1 {
+    margin-left: 2%;
+    display: none;
+}
+
+#toggle1 img {
+    width: 20px;
+    color: rgb(245, 245, 245);
+}
+
+.bgcolor {
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+.bgcolor1 {
+    background-color: white;
+    color: rgb(25,25,25);
+}
+
+#user {
+    margin-left: 3%;
+    display: block;
+}
+
+#user button {
+    border: 1px solid black;
+    margin-left: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+#profile {
+    margin-left: 8%;
+    display: none;
+    position: relative;
+}
+
+#profileImg {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.dataProfile {
+    display: none;
+    position: fixed;
+    width: 150px;
+    margin-left: -100px;
+    top: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.dataProfile img {
+    width: 20px;
+    margin-right: 15px;
+}
+
+.dataProfile span {
+    margin-right: 15px;
+}
+
+.dataProfile input {
+    float: right;
+}
+
+.dataProfile a {
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.dataProfile div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dropDown {
+    margin-left: -320px;
+    top: 30px;
+}
+
+.view {
+    display: block;
+}
+
+.user-detail {
+    /* width: 100%; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-profile {
+    width: 50px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.user-detail>div a {
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    /* background-color: #111; */
+    color: black;
+    padding: 10px 15px;
+    border: none;
+}
+
+/* Log In / Sign Up*/
+
+.container input[type=text],
+input[type=Current-password],
+input[type=number] {
+    width: 300px;
+    border: 1px solid white;
+    padding-top: 20px;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+#submit,
+#sign {
+    margin-top: 40px;
+    padding: 10px;
+    width: 300px;
+    background-color: #f44336;
+    border-radius: 20px;
+}
+
+.container {
+    padding: 50px 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h2,p{
+    margin-top: 20px;
+}
+
+.container .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container a {
+    color: tomato;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.container .p {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgb(217, 217, 217);
+    line-height: 0.1em;
+    margin: 30px 10px;
+}
+
+.container .p span {
+    background: #fff;
+    color: rgb(89, 89, 89);
+    padding: 0 10px;
+}
+
+.social {
+    margin-top: 18px;
+}
+
+.social .facebook {
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgb(59, 89, 152);
+}
+
+.social .facebook img {
+    width: 18px;
+}
+
+.social .google {
+    color: black;
+    margin-left: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 12px;
+    border: 1px solid rgb(217, 217, 217);
+    align-items: center;
+}
+
+.social .google img {
+    width: 30px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.close {
+    position: absolute;
+    right: 300px;
+    margin-top: 20px;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:focus {
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+@media screen and (max-width: 1000px){
+    .modal{
+        margin-top: 80px;
+    }
+    .modal-content span{
+        color: #000;
+    }
+    .modal-content{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .container{
+        width: 90%;
+        text-align: center;
+    }
+    .container input[type=text],
+    input[type=Current-password],
+    input[type=number]{
+        width: 80%;
+        margin-left: 8%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #search-box {
+        width: 90%;
+        margin-left: 2%;
+    }
+
+    #after-login {
+        visibility: hidden;
+        order: 2;
+    }
+    #toggle,
+    #toggle1 {
+        margin-left: 2%;
+    }
+
+    #icon-box {
+        width: 400px;
+    }
+   #user{
+       display: flex;
+   }
+   #user,#profile{
+       margin-right: 50px;
+   }
+}
+
+/* Second Nav Bar CSS*/
+.topnav {
+    width: 100%;
+    height: 60px;
+    padding-left: 5%;
+    margin-bottom: 40px;
+    background-color: rgb(173, 162, 162);
+    top: 75px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    height: 20px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid gray;
+    background-color: black;
+}
+
+.active {
+    color: rgb(62, 62, 57);
+    font-weight: bold;
+    border-bottom: 2px solid rgb(231, 44, 48);
+}
+.topnav a:hover {
+    color: rgb(89, 128, 169);
+    border-bottom: 2px solid rgb(231, 44, 48);
+}
+
+@media screen and (max-width: 992px) {
+    .topnav{
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        overflow-x: auto;
+        cursor: pointer;
+        top: 90px;
+        height: 80px;
+    }
+}
+
+
+.overlay {
+    height: 80%;
+    width: 60%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 0;
+    background-color: rgb(245, 245, 245);
+    margin-left:18%;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 10%;
+    width: 90%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    color: black;
+  }
+#result{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    position: relative;  
+    padding-bottom: 100px;
+}
+.item{
+    width: 25%;
+    height: 250px;
+    border: 2px solid red;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    background-color: saddlebrown;
+}
+.item>img{
+    width: 100%;
+    height: 75%;
+}
+
+.food-item{
+    width: 100%;
+    border: 2px solid red;
+    margin: 2%;
+    text-align: center;
+    background-color: saddlebrown;
+}
+

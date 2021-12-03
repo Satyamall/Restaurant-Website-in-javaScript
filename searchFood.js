@@ -1,6 +1,6 @@
 
 window.addEventListener("load",()=>{
-    const btn = document.getElementById("btn");
+    const btn = document.getElementById("btn1");
     const fn = ()=>{
            searchFood();
        }
@@ -33,12 +33,12 @@ const foodData = async (foodName)=>{
 const searchFood=()=>{
     // e.preventDefault();
 
-    const search = document.getElementById("search").value;
+    const search = document.getElementById("search1").value;
     foodData(search);
 }
 
 function showData(data,foodName){
-   const result = document.getElementById("result");
+   const result = document.getElementById("resultItem");
    result.innerHTML = "";
    const content = document.getElementById("search-content");
    content.innerHTML = "";
@@ -62,3 +62,36 @@ function showData(data,foodName){
    }   
 
 }
+
+const foodItem=async(foodName,boxId)=>{
+    try{
+        const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`)
+        const data = await res.json();
+        displayData(data,boxId);
+      }
+      catch(err){
+  
+      }
+}
+
+
+const displayData=(data,boxId)=>{
+    const result = document.getElementById(boxId);
+    result.innerHTML = data.meals.map((food)=>{
+        return `<div class="item">
+        <img src="${food.strMealThumb}" alt="${food.strMeal}">
+        <h3 class="food-name">${food.strMeal}</h3>
+        </div>`
+    })
+}
+
+foodItem("sweet","box-1")
+foodItem("Burger","box-2")
+foodItem("Pizza","box-3")
+foodItem("Biryani","box-4")
+foodItem("veg-biryani","box-5")
+foodItem("chicken","box-6")
+foodItem("Beef","box-7")
+foodItem("meat","box-8")
+foodItem("veg","box-9")
+foodItem("food","box-10")

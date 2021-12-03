@@ -14,7 +14,7 @@ const loadRecepie = async ()=>{
 }
 
 function showData(data){
-    const result = document.getElementById("result");
+    const result = document.getElementById("resultLatest");
     result.innerHTML = "";
         result.innerHTML = data.categories.map((food)=>{
             return `

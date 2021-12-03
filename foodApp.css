@@ -2,28 +2,15 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgb(216, 32, 32);
+    overflow-x: hidden;
 }
-#navbar{
-    width: 100%;
-    height: 50px;
-    border: 2px solid brown;
-    align-items: center;
-    background-color: brown;
-    color: orange;
-    display: flex;
-    gap: 2rem;
-    padding-left: 5%;
-}
-#navbar>a{
-    text-decoration: none;
-    font-size: 20px;
-    border: 2px solid red;
-    border-radius: 10px;
-    background-color: orangered;
+.top-h{
+    margin-top: 200px;
 }
 h2{
     text-align: center;
     color: orange;
+    clear: both;
 }
 
 h1{
@@ -31,18 +18,19 @@ h1{
     background-color: orchid;
 }
 
-#search-box{
+#search-box1{
     text-align: center;
 }
-#search{
-    width: 200px;
-    height: 30px;
+#search1{
+    width: 300px;
+    height: 35px;
     border-radius: 20px;
 }
-#btn{
-    height: 30px;
+#btn1,#btn{
+    height: 40px;
     border-radius: 20px;
-    background-color: black;
+    padding: 5px 10px;
+    background-color: gray;
     color: white;
 }
 #search-content{
