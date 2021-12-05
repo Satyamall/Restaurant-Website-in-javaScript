@@ -75,12 +75,10 @@ body {
 
 .bgcolor {
     background-color: rgb(27, 27, 27);
-    color: white;
 }
 
 .bgcolor1 {
-    background-color: white;
-    color: rgb(25,25,25);
+    background-color: rgb(241, 30, 30);
 }
 
 #user {

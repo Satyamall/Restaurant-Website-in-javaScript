@@ -33,9 +33,8 @@ function colorchange() {
     toggle1.style.display = "none";
     toggle.style.display = "block";
     document.body.classList.toggle("bgcolor1");
-    document.getElementById("navbar").style.backgroundColor = "rgb(245, 245, 245)";
-    document.getElementById("mytopnav").style.backgroundColor = "white";
-    document.getElementById("mytopnav").style.color = "rgb(0, 0, 0, .75)";
+    document.getElementById("navbar").style.backgroundColor = "rgb(248, 198, 198)";
+    document.getElementById("mytopnav").style.backgroundColor = "rgb(173, 162, 162)";
 }
 
 // * closing of login and signup page on click in window
@@ -90,16 +89,14 @@ function addData() {
     localStorage.setItem("usersData", JSON.stringify(userData));
     document.getElementById("user").style.display = "none";
     document.getElementById("profile").style.display = "block";
-    document.getElementById("login").style.display = "none";
     document.getElementById("signup").style.display = "none";
-    document.getElementById("after-login").style.display = "block";
 }
 
 function usersDataLoad() {
     const data = JSON.parse(localStorage.getItem("usersData"));
     if (data) {
         userData = data;
-        //addData(data);
+        // addData(data);
         loginData(data);
     }
 }
@@ -117,10 +114,10 @@ window.addEventListener("load", function () {
 function loginData(data) {
     var loginEmail = document.getElementById('loginEmail').value;
     var loginPassword = document.getElementById('loginPassword').value;
-    // if (!loginEmail || !loginPassword) {
-    //     alert("Fill the details thenlogin");
-    //     return;
-    // }
+    if (!loginEmail || !loginPassword) {
+        alert("Fill the details thenlogin");
+        return;
+    }
     var uemail = "";
     var upassword = "";
     var username;
@@ -141,14 +138,6 @@ function loginData(data) {
         document.getElementById("user").style.display = "none";
         document.getElementById("profile").style.display = "block";
         document.getElementById("login").style.display = "none";
-        document.getElementById("signup").style.display = "none";
-        document.getElementById("subscription").style.display = "none";
-        document.getElementById("after-login").style.display = "block";
-        var div = document.getElementById("userName");
-        div.innerHTML = "";
-        var p = document.createElement("p");
-        p.textContent = `Hello, ${username}`;
-        div.append(p);
     }
 }
 
@@ -159,7 +148,6 @@ logout.addEventListener("click", afterLogout);
 function afterLogout() {
     document.getElementById("user").style.display = "block";
     document.getElementById("profile").style.display = "none";
-    document.getElementById("after-login").style.display = "none";
 }
 
 var open = document.getElementById("search");
