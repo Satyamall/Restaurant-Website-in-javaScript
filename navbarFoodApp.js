@@ -55,7 +55,7 @@ function navbar() {
                <h3>&#x2728;FOOD APP &#x2728;</h3>
             </div>
             <h2>Log In</h2>
-            <p style="color: rgb(142,142,147);">Get a personalized experience, and access all your music</p>
+            <p style="color: rgb(142,142,147);">After login and signup access your order of food</p>
             <input type="text" placeholder="Enter Email or Mobile Number" id="loginEmail">
             <input type="Current-password" placeholder="Enter Your Password" id="loginPassword">
             <button id="submit">Countinue</button>
@@ -90,7 +90,7 @@ function navbar() {
                <h3>&#x2728;FOOD APP &#x2728;</h3>
             </div>
             <h2>Sign Up</h2>
-            <p style="color: rgb(142,142,147);">Get a personalized experience, and access all your music</p>
+            <p style="color: rgb(142,142,147);">After login and signup access your order of food</p>
             <input type="text" placeholder="User Name" id="name">
             <input type="number" placeholder="Enter your Mobile Number" id="number">
             <input type="text" placeholder="Enter your Email" id="email">

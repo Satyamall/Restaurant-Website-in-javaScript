@@ -199,7 +199,7 @@ input[type=number] {
 
 #submit,
 #sign {
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 10px;
     width: 300px;
     background-color: #f44336;
@@ -215,7 +215,7 @@ input[type=number] {
     align-items: center;
 }
 .container h2,p{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .container .nav-icon {
@@ -227,7 +227,7 @@ input[type=number] {
 .container a {
     color: tomato;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .container .p {
