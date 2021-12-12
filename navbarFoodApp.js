@@ -3,7 +3,7 @@ function navbar() {
     <nav id="navbar">
     <button class="openbtn" id="opensidebar">☰</button>
     <div id="icon-box">
-        <a href="home.html" class="nav-icon">
+        <a href="index.html" class="nav-icon">
           <h3>&#x2728;FOOD APP &#x2728;</h3>
         </a>
     </div>
@@ -118,7 +118,7 @@ function navbar() {
 
 <!-- Second Navbar -->
 <div class="topnav" id="mytopnav">
-    <a href="home.html" class="active">All</a>
+    <a href="index.html" class="active">All</a>
     <a href="getReceipe.html">Get Receipe</a>
     <a href="latest.html">Latest Receipe</a>
 </div>
